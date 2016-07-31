@@ -1,8 +1,12 @@
 # Combining Layers to Isolate Pixels (CLIP)
 A program that can recreate a partially-semitransparent image, given copies of it with a black background and a white background.
+
 Version 1.0
+
 Copyright (C) 2016  RoadrunnerWMC
+
 Begun 1/29/14, heavily improved 7/31/16.
+
 
 ## Overview
 
@@ -19,11 +23,13 @@ The program could conceivably be generalized to accept backgrounds of other colo
 
 Derivations of the formulas used in the program are included in source code comments in algorithm.py.
 
+
 ## Running the program
 
 Run clip.py with Python 3.5 or newer. PyQt5 needs to be installed for the copy of Python you're using, as well.
 
 CLIP's UI is intuitive enough that it should need no explanation. One word of caution, though -- you need to make sure that the image with the black background and the image with the white background otherwise line up *perfectly*. A single-pixel position difference can wreck everything.
+
 
 ## Licensing
 
