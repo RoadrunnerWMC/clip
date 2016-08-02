@@ -10,7 +10,7 @@ Begun 1/29/14, heavily improved 7/31/16.
 
 ## Overview
 
-![Example](https://raw.githubusercontent.com/RoadrunnerWMC/clip/readme-example.png)
+![Example](https://raw.githubusercontent.com/RoadrunnerWMC/clip/master/readme-example.png)
 
 CLIP was written for the purpose of creating images of objects in video games that preserve antialiasing and semitransparency. Video games can't be made to render with literally transparent backgrounds, but one can often make the background of a scene to be black or white. Taking two otherwise-identical screenshots with a black background and a white background allows CLIP to calculate what the scene would look like if the background was actually transparent. There are probably other use cases for this, too.
 
