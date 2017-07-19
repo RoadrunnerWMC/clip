@@ -73,7 +73,7 @@ class AbstractAlgorithm(threading.Thread):
                 finalColor = self._calculateOverlayColor(blackCol, whiteCol)
 
                 # Paint it
-                self.putColor(*finalColor, x, y)
+                self.putColor(*finalColor, x=x, y=y)
 
             # Call a function with the current percentage as an argument
             self.rowCompletedHandler(100 * ((y * 1.0) / self.height))
@@ -143,7 +143,7 @@ class AbstractAlgorithm(threading.Thread):
 
         # Fully opaque
         if (bR == wR) and (bG == wG) and (bB == wB):
-            return (*blackCol, 255)
+            return bR, bG, bB, 255
 
         # If we've reached here, it's semitransparent. Do the actual
         # calculation.
