@@ -254,7 +254,7 @@ class AlgorithmDialog(QtWidgets.QDialog):
         self.percent = 0.0
 
         # Refresh the time-remaining every 0.1 seconds
-        self.startTime = time.clock()
+        self.startTime = time.perf_counter()
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.updateTime)
         self.timer.start(100)
@@ -287,7 +287,7 @@ class AlgorithmDialog(QtWidgets.QDialog):
         Updates the time label
         """
         if self.percent <= 0: return
-        currentTime = time.clock()
+        currentTime = time.perf_counter()
         timeDiff = currentTime - self.startTime
         timeRemaining = (timeDiff * (100 / self.percent)) - timeDiff
 
