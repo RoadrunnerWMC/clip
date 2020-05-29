@@ -122,6 +122,7 @@ class AbstractAlgorithm(threading.Thread):
         #
         #     In an actual implementation, we can just pick a channel
         #         and apply that formula to it to calculate the opacity.
+        #         Picking the one with the most contrast is a good idea.
         #
         #     Now that we have a, we can use the "c₁ = a t" equation to
         #     find t:
@@ -149,7 +150,7 @@ class AbstractAlgorithm(threading.Thread):
         # calculation.
 
         # Find opacity
-        a = 1 - ((wR - bR) / 255)
+        a = 1 - (max(wR - bR, wG - bG, wB - bB) / 255)
         a = min(a, 1)
         if a <= 0:
             return 0, 0, 0, 0
