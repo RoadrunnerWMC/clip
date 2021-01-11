@@ -162,7 +162,7 @@ class AbstractAlgorithm(threading.Thread):
         a *= 255
 
         # Return the final color
-        return r, g, b, a
+        return int(r), int(g), int(b), int(a)
 
     def getColor(self, x, y):
         """

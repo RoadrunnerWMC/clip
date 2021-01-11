@@ -25,7 +25,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-VERSION = '1.0'
+VERSION = '2.0'
 
 
 import os.path
@@ -272,7 +272,7 @@ class AlgorithmDialog(QtWidgets.QDialog):
         """
         if self == None: return # Bug that sometimes happens when the
                                 # user closes the dialog
-        self.progBar.setValue(percent)
+        self.progBar.setValue(int(percent))
         self.percent = percent
 
         pix = QtGui.QPixmap(self.bgPix)

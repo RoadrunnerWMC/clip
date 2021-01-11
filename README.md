@@ -1,7 +1,7 @@
 # Combining Layers to Isolate Pixels (CLIP)
 A program that can recreate a partially-semitransparent image, given copies of it with a black background and a white background.
 
-Version 1.0
+Version 2.0
 
 Copyright (C) 2016  RoadrunnerWMC
 
