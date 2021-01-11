@@ -28,6 +28,7 @@ SCRIPT_FILE = 'clip.py'
 DATA_FOLDERS = []
 DATA_FILES = ['README.md', 'readme-example.png']
 
+EXCLUDE_SELECT = True
 EXCLUDE_THREADING = False
 
 # macOS only
@@ -124,9 +125,11 @@ print('>>')
 # Excludes
 excludes = ['calendar', 'datetime', 'difflib', 'doctest', 'hashlib', 'inspect',
     'locale', 'multiprocessing', 'optpath', 'os2emxpath', 'pdb',
-    'select', 'socket', 'ssl', 'unittest',
+    'socket', 'ssl', 'unittest',
     'FixTk', 'tcl', 'tk', '_tkinter', 'tkinter', 'Tkinter']
 
+if EXCLUDE_SELECT:
+    excludes.append('select')
 if EXCLUDE_THREADING:
     excludes.append('threading')
 
